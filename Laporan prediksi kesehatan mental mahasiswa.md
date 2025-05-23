@@ -2,9 +2,9 @@
 ---
 ## Project Overview
 
-Kesehatan mental adalah kondisi kesejahteraan mental yang memungkinkan seseorang mengatasi tekanan hidup, menyadari kemampuan mereka, belajar dan bekerja dengan baik, serta berkontribusi pada komunitas mereka [1]. Kondisi kesehatan mental meliputi gangguan mental dan disabilitas psikososial serta kondisi mental lainnya yang terkait dengan tekanan berat, gangguan fungsi, atau risiko melukai diri sendiri.
+Kesehatan mental adalah kondisi kesejahteraan mental yang memungkinkan seseorang mengatasi tekanan hidup, menyadari kemampuan mereka, belajar dan bekerja dengan baik, serta berkontribusi pada komunitas mereka [^1]. Kondisi kesehatan mental meliputi gangguan mental dan disabilitas psikososial serta kondisi mental lainnya yang terkait dengan tekanan berat, gangguan fungsi, atau risiko melukai diri sendiri.
 
-Berbagai penelitian menunjukkan bahwa mahasiswa dengan kesehatan mental yang baik cenderung memiliki nilai GPA yang lebih tinggi dibandingkan mereka yang mengalami masalah kesehatan mental seperti stres, kecemasan, dan depresi [2]. Di lingkungan akademik, tekanan untuk mencapai prestasi yang tinggi, beban tugas yang berat, dan transisi kehidupan dapat mempengaruhi kesehatan mental mahasiswa secara signifikan.
+Berbagai penelitian menunjukkan bahwa mahasiswa dengan kesehatan mental yang baik cenderung memiliki nilai GPA yang lebih tinggi dibandingkan mereka yang mengalami masalah kesehatan mental seperti stres, kecemasan, dan depresi [^2]. Di lingkungan akademik, tekanan untuk mencapai prestasi yang tinggi, beban tugas yang berat, dan transisi kehidupan dapat mempengaruhi kesehatan mental mahasiswa secara signifikan.
 
 Mengingat pentingnya kesehatan mental dalam kesuksesan akademik, diperlukan sistem yang dapat memprediksi tingkat kesehatan mental mahasiswa berdasarkan faktor-faktor yang dapat diidentifikasi. Dengan adanya prediksi ini, institusi pendidikan dapat memberikan intervensi dini dan dukungan yang tepat kepada mahasiswa yang membutuhkan.
 
@@ -202,7 +202,7 @@ Proyek ini berhasil mengembangkan model prediksi kesehatan mental mahasiswa deng
 
 ## Referensi
 
-[1] World Health Organization. (2022). Mental health: strengthening our response. Diakses dari: https://www.who.int/news-room/fact-sheets/detail/mental-health-strengthening-our-response
+[^1] World Health Organization. (2022). Mental health: strengthening our response. Diakses dari: https://www.who.int/news-room/fact-sheets/detail/mental-health-strengthening-our-response
 
-[2] Zulfa, E., Amir, H., Ginting, R., & Sudarno, S. (2024). Analisis Korelasi Kesehatan Mental dan Indeks Prestasi Mahasiswa Jurusan Administrasi Niaga Politeknik Negeri Jakarta dengan Kombinasi Metode XGBoost dan SHAP. *Jurnal Administrasi Profesional*, 5(1), 26-37.
+[^2] Zulfa, E., Amir, H., Ginting, R., & Sudarno, S. (2024). Analisis Korelasi Kesehatan Mental dan Indeks Prestasi Mahasiswa Jurusan Administrasi Niaga Politeknik Negeri Jakarta dengan Kombinasi Metode XGBoost dan SHAP. *Jurnal Administrasi Profesional*, 5(1), 26-37.
 

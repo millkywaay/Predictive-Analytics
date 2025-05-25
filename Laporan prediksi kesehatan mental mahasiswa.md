@@ -239,23 +239,20 @@ Berdasarkan hasil evaluasi:
 
 ### Kaitan dengan Business Understanding
 
-Tujuan awal proyek ini adalah untuk **memprediksi tingkat kesehatan mental mahasiswa** berdasarkan faktor-faktor yang tersedia, guna memungkinkan institusi pendidikan memberikan intervensi lebih awal.
+Tujuan utama proyek ini adalah untuk membangun **model prediktif yang akurat** dalam mendeteksi tingkat kesehatan mental mahasiswa menggunakan data survei yang tersedia.
 
-Melalui analisis **feature importance**, ditemukan bahwa faktor paling berpengaruh terhadap kesehatan mental mahasiswa adalah:
+- Dengan **error prediksi yang sangat kecil**, model ini dapat digunakan untuk **identifikasi dini mahasiswa yang berisiko mengalami gangguan mental**.
+![Feature Importance](fitur_importance.png)
+- Berdasarkan analisis fitur penting (_feature importance_), ditemukan bahwa variabel seperti:
+  - **CGPA (nilai akademik)**
+  - **Jam belajar per minggu**
+  - **Usia**
+  - **Program studi**
+  - **Frekuensi gejala dalam 7 hari terakhir**
+  
+  memiliki pengaruh signifikan terhadap skor kesehatan mental. Hal ini menunjukkan bahwa faktor akademik dan keseharian mahasiswa **berkorelasi kuat** dengan kondisi mental mereka.
 
-- **CGPA**
-- **StudyHoursPerWeek**
-- **Age**
-- **Course**
-- **SymptomFrequency_Last7Days**
-
-
-![Feature Importance](fitur_importante.png)
-
-Hasil ini memberikan insight penting bahwa beban akademik dan waktu belajar berkaitan erat dengan skor kesehatan mental mahasiswa. Oleh karena itu, prediksi yang dihasilkan oleh model **sangat relevan dengan konteks dan problem statement proyek**, serta dapat digunakan untuk **membentuk kebijakan berbasis data** di lingkungan kampus, misalnya:
-
-- Menyediakan konseling akademik untuk mahasiswa dengan beban belajar tinggi,
-- Menyediakan program manajemen stres berdasarkan gejala yang muncul.
+> Artinya, **institusi pendidikan dapat memanfaatkan model ini sebagai sistem pendukung keputusan** untuk memetakan risiko mental mahasiswa dan mengambil tindakan preventif secara lebih cepat dan berbasis data.
 
 
 ## Kesimpulan

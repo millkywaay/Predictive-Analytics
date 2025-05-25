@@ -48,6 +48,18 @@ Dataset yang digunakan berasal dari platform Kaggle dengan judul "Student Mental
 
 Data ini diperoleh dari survei yang dilakukan terhadap mahasiswa di International Islamic University Malaysia. Dataset terdiri dari **1000 baris** (observasi) dan **16 kolom** (variabel). Dataset diunggah ke Kaggle oleh MD Shariful Islam, seorang peneliti yang ingin memahami lebih lanjut tentang kesehatan mental mahasiswa.
 
+### Pemeriksaan Kualitas Data:
+- **Missing Value**: Tidak ditemukan nilai yang hilang pada seluruh kolom.
+- **Data Duplikat**: Tidak terdapat baris yang terduplikasi dalam dataset.
+- **Outlier**:  
+  - Deteksi menggunakan boxplot tidak menunjukkan outlier yang mencolok.  
+  - Metode IQR mengidentifikasi 67 nilai sebagai outlier pada kolom `SpecialistTreatment` dan `HasMentalHealthSupport`. Namun, nilai-nilai tersebut merupakan kelompok minoritas dari distribusi yang imbalanced, bukan outlier yang salah input atau ekstrim secara nilai.
+
+### Konsistensi Data:
+Telah dilakukan standarisasi pada kolom kategorikal seperti `Course` dan `YearOfStudy` untuk mengatasi inkonsistensi penulisan (misalnya huruf besar/kecil atau variasi penamaan). Setelah pembersihan:
+- Jumlah kategori pada `Course` menurun dari 49 menjadi 35.
+- `YearOfStudy` berhasil disederhanakan menjadi 4 kategori yang seragam.
+
 ### Variabel-variabel pada dataset adalah sebagai berikut:
 
 | Nama Kolom                   | Deskripsi                                                 |
@@ -107,10 +119,15 @@ Pada tahap ini dilakukan serangkaian proses untuk menyiapkan data agar siap digu
 - **YearOfStudy**: Year 1 → 1, Year 2 → 2, Year 3 → 3, Year 4 → 4
 - **Alasan**: Algoritma machine learning memerlukan input numerik untuk dapat memproses data kategorik.
 
-### 3. Split Dataset
-
+### **3. Split Dataset**
 - Dataset dibagi menjadi data latih (80%) dan data uji (20%) menggunakan `train_test_split`.
-- **Alasan**: Memastikan evaluasi model dilakukan pada data yang tidak pernah dilihat selama training untuk mengukur generalisasi model.
+- **Target (variabel y)** yang digunakan dalam pemodelan adalah kolom `MentalHealthScore`.
+- Baris kode untuk pemisahan dataset:
+  ```python
+  X = df_copy.drop(["MentalHealthScore"], axis=1)
+  y = df_copy["MentalHealthScore"]
+  X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=123)
+
 
 ### 4. Frequency Encoding untuk Kolom Course
 
@@ -219,6 +236,27 @@ Berdasarkan hasil evaluasi:
 3. **Akurasi Prediksi**: MSE 0.000713 pada model AdaBoost menunjukkan error prediksi yang sangat rendah. Model mampu memprediksi skor kesehatan mental dengan deviasi standar sekitar ±0.027 dari nilai aktual.
 
 4. **Practical Significance**: Dengan error yang sangat kecil, model dapat memberikan prediksi yang akurat untuk identifikasi dini mahasiswa yang memerlukan perhatian khusus terkait kesehatan mental.
+
+### Kaitan dengan Business Understanding
+
+Tujuan awal proyek ini adalah untuk **memprediksi tingkat kesehatan mental mahasiswa** berdasarkan faktor-faktor yang tersedia, guna memungkinkan institusi pendidikan memberikan intervensi lebih awal.
+
+Melalui analisis **feature importance**, ditemukan bahwa faktor paling berpengaruh terhadap kesehatan mental mahasiswa adalah:
+
+- **CGPA**
+- **StudyHoursPerWeek**
+- **Age**
+- **Course**
+- **SymptomFrequency_Last7Days**
+
+
+![Feature Importance](fitur_importante.png.png)
+
+Hasil ini memberikan insight penting bahwa beban akademik dan waktu belajar berkaitan erat dengan skor kesehatan mental mahasiswa. Oleh karena itu, prediksi yang dihasilkan oleh model **sangat relevan dengan konteks dan problem statement proyek**, serta dapat digunakan untuk **membentuk kebijakan berbasis data** di lingkungan kampus, misalnya:
+
+- Menyediakan konseling akademik untuk mahasiswa dengan beban belajar tinggi,
+- Menyediakan program manajemen stres berdasarkan gejala yang muncul.
+
 
 ## Kesimpulan
 

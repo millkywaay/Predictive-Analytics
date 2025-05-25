@@ -250,7 +250,7 @@ Melalui analisis **feature importance**, ditemukan bahwa faktor paling berpengar
 - **SymptomFrequency_Last7Days**
 
 
-![Feature Importance](fitur_importante.png.png)
+![Feature Importance](fitur_importante.png)
 
 Hasil ini memberikan insight penting bahwa beban akademik dan waktu belajar berkaitan erat dengan skor kesehatan mental mahasiswa. Oleh karena itu, prediksi yang dihasilkan oleh model **sangat relevan dengan konteks dan problem statement proyek**, serta dapat digunakan untuk **membentuk kebijakan berbasis data** di lingkungan kampus, misalnya:
 
